@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link  rel="stylesheet" href ="styles.css">
+    <title>Naome's Portofolio</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-transparent bg-light">
+        <a class="navbar-brand py-3" style="margin-left: 16%;" href="#">NAOME JOYEUSE</a>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse col-md-8 justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#About-me">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portofolio">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog-section">BLOGS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-section py-5">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+            
+      <section class="home">
+      <div class="image">
+        <img src="images/home_img.jpg" class="girl">
+      </div>
+      <div class="home-details">
+        <p class="detail-title">HELLO, MY NAME IS</p>
+        <hr class="line" style="width: 80px; height: 3px; position: absolute; left: 350px; top: 270px; background-color: black;">
+        <h3 class="detail-name">Naome Joyeuse</h3>
+        <p class="detail-job">Full Stack Developer</p>
+        <div > 
+            <p class="detail-email"><img src="images/icons8-email-96.png" alt="icon">kanyananome5@gmail.com</p>
+        </div>
+        <p class="contact"><img src="images/icons8-call-50.png" alt="icon">+250798287672</p>
+      </div>
+     
+     
+    </section>
+  
+    <section id="About-me">
+        <div class="container about">
+            <h3 class="text-center">About Me</h3>
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <img src="/images/usepgf.png" class="img-fluid rounded" alt="Your Image">
+                </div>
+                <div class="col-md-8 d-flex flex-column justify-content-center">
+                    <div>
+                        <h4 class="mb-3">I am an enthusiastic web developer based in Rwanda, with over 3 years of experience in website & product design.</h4>
+                        <p>With a strong background in graphic and web design, I excel at understanding client needs and delivering modern, effective solutions. My expertise spans front-end development, landing pages, email design, and mobile UI/UX design. Let's collaborate to bring your ideas to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- portofolio-->
+    <section id="portofolio">
+        <h3 style="text-align: center;">PORTFOLIO</h3>
+        <div class="portofolio-container">
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+             
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/learning.jpeg" class="card-img-top" alt="E-Learning Project">
+                            <div class="card-body">
+                                <h5 class="card-title">E-Learning Platform</h5>
+                                <p class="card-text1">A comprehensive online learning platform designed for students and school staff, providing a range of educational resources and interactive courses.</p>
+                                <p class="card-text1">Developed using ASP.NET and SQL Server.</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/quiz1.jpeg" class="card-img-top" alt="Online Quiz App">
+                            <div class="card-body">
+                                <h5 class="card-title">Online Quiz App</h5>
+                                <p class="card-text1">An engaging online quiz application allowing users to create, share, and participate in quizzes across various subjects.</p>
+                               
+                                <p class="card-text1">Built with Java and Springboot</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/cancer.jpg" class="card-img-top" alt="Cancer Detection System">
+                            <div class="card-body">
+                                <h5 class="card-title">Cancer Detection System</h5>
+                                <p class="card-text1">An advanced cancer detection system utilizing machine learning algorithms to assist in early diagnosis and treatment planning.</p>
+                                <p class="card-text1">Implemented using Python and Django.</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/transport.jpg" class="card-img-top" alt="Transport Management System">
+                            <div class="card-body">
+                                <h5 class="card-title">Transport Management System</h5>
+                                <p class="card-text1">A comprehensive transport management system that optimizes logistics, vehicle tracking, and route planning for transportation companies.</p>
+                                <p class="card-text1">Built with Angular and .NET Core.</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/tecoomerce.jpg" class="card-img-top" alt="E-Commerce Project">
+                            <div class="card-body">
+                                <h5 class="card-title">E-Commerce Platform</h5>
+                                <p class="card-text1">A dynamic e-commerce platform providing a seamless shopping experience with a wide range of products and secure payment options.</p>
+                                <p class="card-text1">Backend developed with Java Spring Boot and frontend with React.</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/immigration.jpg" class="card-img-top" alt="Immigration Management System">
+                            <div class="card-body">
+                                <h5 class="card-title">Immigration Management System</h5>
+                                <p class="card-text1">A robust system designed to streamline the immigration process, handling applications, visas, and residency permits efficiently.</p>
+                                <p class="card-text1">Developed using Java</p>
+                                <p class="card-duration">Duration: 6 weeks</p>
+                                <a href="#" class="btn btn-primary">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="blog-section">
+        <h3 style="text-align: center;">Blogs</h3>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+            
+                <div class="col mb-4">
+                    <div class="blog-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/e-learning.jpeg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8 ms-3">
+                                <div class="card-body-blog">
+                                    <h5 class="card-title">Online Learning Platform Growth</h5>
+                                    <p class="card-text">Explore the rapid growth and impact of online learning platforms in the education sector...</p>
+                                    <a href="#" class="read-more-link">Read More</a>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <div class="interaction">
+                                        <i class="fas fa-thumbs-up"></i> <span>123</span>
+                                        <i class="fas fa-comments"></i> <span>45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="blog-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/cyber.jpeg" class="img-fluid rounded-start">
+                            </div>
+                            <div class="col-md-8 ms-3">
+                                <div class="card-body-blog">
+                                    <h5 class="card-title">The Importance of Cybersecurity</h5>
+                                    <p class="card-text">In today's interconnected world, cybersecurity plays a vital role in safeguarding sensitive information and digital assets...</p>
+                                    <a href="#" class="read-more-link">Read More</a>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <div class="interaction">
+                                        <i class="fas fa-thumbs-up"></i> <span>123</span>
+                                        <i class="fas fa-comments"></i> <span>45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="blog-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/cyber.jpeg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8 ms-3">
+                                <div class="card-body-blog">
+                                    <h5 class="card-title">The Importance of Cybersecurity</h5>
+                                    <p class="card-text">In today's interconnected world, cybersecurity plays a vital role in safeguarding sensitive information and digital assets...</p>
+                                    <a href="#" class="read-more-link">Read More</a>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <div class="interaction">
+                                        <i class="fas fa-thumbs-up"></i> <span>123</span>
+                                        <i class="fas fa-comments"></i> <span>45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="blog-card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/imagee1.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8 ms-3">
+                                <div class="card-body-blog">
+                                    <h5 class="card-title">Trends in Technology</h5>
+                                    <p class="card-text">In today's interconnected world, cybersecurity plays a vital role in safeguarding sensitive information ...</p>
+                                    <a href="#" class="read-more-link">Read More</a>
+                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    <div class="interaction">
+                                        <i class="fas fa-thumbs-up"></i> <span>123</span>
+                                        <i class="fas fa-comments"></i> <span>45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact-section py-5">
+        <div class="container">
+            <h3 class="text-center mb-4">Contact Me</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+                <div class="contact-touch col-md-6 mb-4 d-flex align-items-center">
+                    <div class="contact-touch">
+                        <h5>Let's Get In Touch</h5>
+                        <p>If you have any questions, feel free to contact me using the form. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>           
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>About Me</h5>
+                    <p>Passionate developer with a commitment to excellence. Skilled in problem-solving and collaboration. Let's create something great!</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portofolio</a></li>
+                        <li><a href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: kanyananaome5@gmail.com</li>
+                        <li>Phone: +250798287672</li>
+                        <li>Address: Kigali,Rwanda</li>
+                    </ul>
+                    <h5>Social</h5>
+                    <a href="#" class="mr-2"><img src="/images/icons8_github_40px.png" alt="Github" width="30"></a>
+                    <a href="#" class="mr-2"><img src="/images/icons8_instagram_40px.png" alt="Instagram" width="30"></a>
+                    <a href="#"><img src="/images/icons8_linkedin_40px.png" alt="LinkedIn" width="30"></a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 Naome Joyeuse. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

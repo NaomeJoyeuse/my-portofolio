@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: cd Blog-Backend && npm run build
+          command: cd blogs-backend && npm run build
 
   run_tests:
     executor: node-executor
@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: Run Tests
-          command: cd Blog-Backend && npm test
+          command: cd blogs-backend && npm test
 
 workflows:
   version: 2

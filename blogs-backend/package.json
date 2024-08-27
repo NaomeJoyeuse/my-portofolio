@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testTimeout 20000",
     "start": "node index.js",
     "build": "echo 'No build step defined' && exit 0"
+    "test": "jest --coverage",
+    "coverage": "jest --coverage --ci",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
   "author": "",

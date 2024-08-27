@@ -18,6 +18,9 @@ jobs:
     executor: node-executor
     steps:
       - checkout
+       - run:
+          name: Grant Execute Permission to Jest
+          command: chmod +x ./node_modules/.bin/jest
       - run:
           name: Run Tests
           command: cd blogs-backend && npm test

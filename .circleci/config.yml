@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node-executor:
     docker:
-      - image: circleci/node:20.15.0
+      - image: node:lts-alpine3.19 # the primary container, where your job's commands are run
 
 jobs:
   install_dependencies:

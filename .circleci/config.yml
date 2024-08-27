@@ -10,7 +10,6 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-      run: npm install # install dependencies
       - run:
           name: Install Dependencies
           command: cd Blog-Backend && npm run build

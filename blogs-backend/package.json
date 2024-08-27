@@ -5,9 +5,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "echo 'No build step defined' && exit 0"
-    "test": "jest --coverage",
-    "coverage": "jest --coverage --ci",
-    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",

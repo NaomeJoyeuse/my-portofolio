@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "build": "echo 'No build step defined' && exit 0"
+    "build": "echo 'No build step defined' && exit 0",
     "test": "jest --coverage"
   },
   "keywords": [],

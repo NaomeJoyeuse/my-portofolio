@@ -25,7 +25,7 @@ jobs:
           name: Run Tests
           command:  |
             cd blogs-backend
-            npm test
+            sudo npx jest --coverage
 
 workflows:
   version: 2

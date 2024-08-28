@@ -18,7 +18,7 @@ jobs:
     executor: node-executor
     steps:
       - checkout
-       - run:
+      - run:
           name: Grant Execute Permission to Jest
           command: chmod +x ./node_modules/.bin/jest
       - run:

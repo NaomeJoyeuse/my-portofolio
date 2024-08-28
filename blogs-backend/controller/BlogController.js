@@ -68,49 +68,6 @@ const schema = Joi.object({
         res.status(500).send({ error: "Error creating blog" });
     }
 };
-// exports.createBlogPost = async (req, res) => {
-//     try {
-//         const { title, content, author, image = '', public_id = '' } = req.body;
-  
-//       if (!title || !content || !author) {
-//         return res.status(400).json({ error: 'Title, content, and author are required' });
-//       }
-  
-//       const post = new Post({
-//         title,
-//         content,
-//         author,
-//         image: image || '',
-//         public_id: public_id || ''
-//       });
-  
-//       await post.save();
-  
-//       return res.status(201).send({
-//         message: 'Post created successfully',
-//         post
-//       });
-//     } catch (error) {
-//       console.error('Error in createBlogPost:', error); // Log detailed error
-//       return res.status(500).json({ message: 'Server error', error: error.message });
-//     }
-//   };
-  
-// exports.createBlog = async (req, res) => {
-//     try {
-//         const { error } = schema.validate(req.body);
-//         if (error) return res.status(400).send({ error: error.details[0].message });
-
-//         const { title, content, author } = req.body;
-//         const post = new Post({ title, content, author });
-//         await post.save();
-//         res.status(201).send(post);
-//     } catch (error) {
-        
-//         res.status(500).send({ error: "Error creating blog" });
-//     }
-// };
-
 
 exports.getAllBlogPosts = async (req, res) => {
   try {

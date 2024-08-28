@@ -2,6 +2,7 @@ const request = require('supertest');
 const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+
 const jwt = require('jsonwebtoken');
 const UserModel =  require('../models/User');
 const userController = require('../controller/UserController');

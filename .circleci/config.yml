@@ -23,7 +23,9 @@ jobs:
           command: cd blogs-backend
       - run:
           name: Run Tests
-          command: npm test
+          command:  |
+            cd blogs-backend
+            npm test
 
 workflows:
   version: 2

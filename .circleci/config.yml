@@ -23,7 +23,7 @@ jobs:
           command: cd blogs-backend
       - run:
           name: Grant Execute Permission to Jest
-          command: chmod +x ./node_modules/.bin/jest
+          command: chmod +x /node_modules/.bin/jest
       - run:
           name: Run Tests
           command: npm test

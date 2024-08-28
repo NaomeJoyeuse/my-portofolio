@@ -12,7 +12,10 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: cd blogs-backend && npm install
+          command:  |
+            cd blogs-backend
+            rm -rf node_modules
+            npm instal
 
   run_tests:
     executor: node-executor

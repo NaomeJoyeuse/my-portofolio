@@ -26,7 +26,7 @@ jobs:
           command:  |
             cd blogs-backend
             chmod +x ./node_modules/.bin/jest
-            npx jest --coverage
+             npx jest --coverage --no-cache
 
 workflows:
   version: 2

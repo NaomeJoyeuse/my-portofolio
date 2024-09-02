@@ -12,10 +12,10 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command: |
+          command:  |
             cd blogs-backend
             rm -rf node_modules
-            npm install
+            npm instal
 
   run_tests:
     executor: node-executor
@@ -26,9 +26,10 @@ jobs:
           command: cd blogs-backend
       - run:
           name: Run Tests
-          command: |
+          command:  |
             cd blogs-backend
-            npm test -- --coverage --coverageReporters=text-lcov | tee coverage/lcov.info | npx coveralls
+            chmod +x ./node_modules/.bin/jest
+             npx jest --coverage --no-cache
 
 workflows:
   version: 2

@@ -15,7 +15,7 @@ jobs:
           command:  |
             cd blogs-backend
             rm -rf node_modules
-            npm install  # Fixed typo from 'npm instal' to 'npm install'
+            npm install
 
   run_tests:
     executor: node-executor
@@ -31,10 +31,15 @@ jobs:
             chmod +x ./node_modules/.bin/jest
             npx jest --coverage --no-cache
       - run:
+          name: Ensure Coveralls is Executable
+          command: |
+            cd blogs-backend
+            chmod +x ./node_modules/.bin/coveralls
+      - run:
           name: Send Coverage to Coveralls
           command: |
             cd blogs-backend
-            npx coveralls < coverage/lcov.info  # Sends coverage data to Coveralls
+            npx coveralls < coverage/lcov.info
 
 workflows:
   version: 2

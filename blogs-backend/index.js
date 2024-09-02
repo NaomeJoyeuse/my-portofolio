@@ -29,10 +29,10 @@ app.get('/test', (req, res) => res.status(200).json({ message: 'Test route' }));
 //     })
 // })
 // module.exports = app;
-
+const dburl= 'mongodb+srv://naome:12345@cluster0.xwjej.mongodb.net/blogdb?retryWrites=true&w=majority'
 async function startServer() {
     try {
-      await mongoose.connect("mongodb://localhost:27017/blog_db1", {
+      await mongoose.connect(dburl, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
       });

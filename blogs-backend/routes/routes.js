@@ -31,26 +31,56 @@ router.get('/blogs', isAuthenticated,blogController.getAllBlogPosts);
  * @openapi
  * /api/blogs:
  *   post:
- *     summary: Create a new blog
+ *     summary: Create a new blog post
  *     tags:
  *       - Blogs
- *     description: Create a new blog
+ *     description: Create a new blog post with an image upload
  *     security:
  *       - bearerAuth: []
  *     requestBody:
  *       required: true
  *       content:
- *         application/json:
+ *         multipart/form-data:
  *           schema:
- *             $ref: '#/components/schemas/Blog'
+ *             type: object
+ *             properties:
+ *               title:
+ *                 type: string
+ *                 description: The title of the blog post
+ *                 example: My New Blog Post
+ *               content:
+ *                 type: string
+ *                 description: The content of the blog post
+ *                 example: This is the content of my new blog post.
+ *               author:
+ *                 type: string
+ *                 description: The author of the blog post
+ *                 example: John Doe
+ *               image:
+ *                 type: string
+ *                 format: binary
+ *                 description: The image file to upload
  *     responses:
  *       '201':
  *         description: Blog created successfully
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: Post created successfully
+ *                 post:
+ *                   $ref: '#/components/schemas/Blog'
+ *       '400':
+ *         description: Bad Request - Missing image file
  *       '401':
- *         description: Unauthorized - user authentication failed
+ *         description: Unauthorized - User authentication failed
  *       '500':
  *         description: Internal server error
  */
+
 router.post('/blogs', isAuthenticated,blogController.createBlogPost);
 
 router.post('/blog', isAuthenticated, blogController.createBlog);

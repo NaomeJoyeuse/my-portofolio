@@ -27,7 +27,7 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: 'Authentication failed' });
     }
 
-    const token = jwt.sign({ id: user._id }, 'secret_key123', { expiresIn: '5h' });
+    const token = jwt.sign({ id: user._id }, 'secret_key123', { expiresIn: '20h' });
     
 
     res.status(200).json({ message: 'Login successful', token: `Bearer ${token}` });

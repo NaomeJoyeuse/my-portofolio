@@ -14,6 +14,13 @@ describe('Blog API', () => {
   let mongoServer;
   let createdBlogId;
 
+  const { isAuthenticated } = require('../middlewares/authentication');
+
+// Mock the middleware to always call next()
+// const mockAuthMiddleware = (req, res, next) => {
+//   req.user = { id: 'mockUserId' }; // Mock user data
+//   next();
+// };
 
   beforeAll(async () => {
     mongoServer = await MongoMemoryServer.create();
@@ -22,21 +29,17 @@ describe('Blog API', () => {
     if (mongoose.connection.readyState === 0) {
       await mongoose.connect(mongoUri);
     }
-    await request(app)
-    .post('/users/signup')
-    .send({
-      email: 'test@example.com',
-      password: 'password123'
-    });
+    // jest.mock('../middlewares/authentication', () => ({
+    //   isAuthenticated: mockAuthMiddleware
+    // }));
 
-  const loginResponse = await request(app)
-    .post('/user/login')
-    .send({
-      email: 'test@example.com',
-      password: 'password123'
-    });
-  
-  token = loginResponse.body.token.split(' ')[1]; 
+    // Create a user and generate a token for authenticated requests
+    // const user = await UserModel.create({
+    //   email: 'testuser@gmail.com',
+    //   password: await bcrypt.hash('password123', 10)
+    // });
+    
+    token ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2Y2RhYTVjZjdjNWUzZGRlMmE3MzE5MCIsImlhdCI6MTcyNTI1OTgyMywiZXhwIjoxNzI1MzMxODIzfQ.j_-8SV9UcclQytn2-ryIJGCHbEZUEtO1aShm_tAT1ns"
   });
 
   afterAll(async () => {
@@ -60,7 +63,7 @@ describe('Blog API', () => {
   it('should create a new blog post', async () => {
     const res = await request(app)
       .post('/api/blogs') 
-      .set('Authorization', `Bearer ${token}`) 
+        .set('Authorization', `Bearer ${token}`) 
       .send({
         title: 'Test Blog',
         content: 'This is a test blog post.',

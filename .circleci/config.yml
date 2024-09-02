@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run:
           name: Install Dependencies
-          command:  |
+          command: |
             cd blogs-backend
             rm -rf node_modules
             npm install
@@ -26,20 +26,9 @@ jobs:
           command: cd blogs-backend
       - run:
           name: Run Tests
-          command:  |
-            cd blogs-backend
-            chmod +x ./node_modules/.bin/jest
-            npx jest --coverage --no-cache
-      - run:
-          name: Ensure Coveralls is Executable
           command: |
             cd blogs-backend
-            chmod +x ./node_modules/.bin/coveralls
-      - run:
-          name: Send Coverage to Coveralls
-          command: |
-            cd blogs-backend
-            npx coveralls < coverage/lcov.info
+            npm test -- --coverage --coverageReporters=text-lcov | tee coverage/lcov.info | npx coveralls
 
 workflows:
   version: 2

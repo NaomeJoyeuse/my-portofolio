@@ -1,4 +1,4 @@
-const express = require("express");
+// const express = require("express");
 const Post = require("../models/Blogs");
 const User = require("../models/User");
 const Comment = require("../models/Blogs_comments");
@@ -9,51 +9,52 @@ const fs = require('fs').promises;
 
 const Joi = require('joi');
 const { response } = require("..");
-// exports.createBlogPost = async (req, res) => {
-//   try {
+exports.createBlogPost = async (req, res) => {
+  try {
     
-//     const { title, content, author } = req.body;
+    const { title, content, author } = req.body;
 
-//     if (!req.file) {
-//       return res.status(400).json({ err: 'Please select an image' });
-//     }
+    if (!req.file) {
+      return res.status(400).json({ err: 'Please select an image' });
+    }
 
-//     const result = await cloudinary.uploader.upload(req.file.path, {
-//       folder: "Blogs"
-//     });
+    const result = await cloudinary.uploader.upload(req.file.path, {
+      folder: "Blogs"
+    });
 
-//     const post = new Post({
-//       title,
-//       content,
-//       author,
-//       image: result.secure_url,
-//       public_id: result.public_id
-//     });
+    const post = new Post({
+      title,
+      content,
+      author,
+      image: result.secure_url,
+      public_id: result.public_id
+    });
 
-//     await post.save();
+    await post.save();
 
-//     await fs.unlink(req.file.path);
-//     console.log('Sending response:', JSON.stringify({
-//         message: 'Post created successfully',
-//         post
-//       }, null, 2));
+    await fs.unlink(req.file.path);
+    console.log('Sending response:', JSON.stringify({
+        message: 'Post created successfully',
+        post
+      }, null, 2));
       
-//     return res.status(201).json({
-//       message: 'Post created successfully',
-//       post
-//     });
+    return res.status(201).json({
+      message: 'Post created successfully',
+      post
+    });
 
-//   } catch (error) {
-//     // console.error(error);
-//     return res.status(500).json({ message: 'Server error' });
-//   }
-// };
+  } catch (error) {
+    // console.error(error);
+    return res.status(500).json({ message: 'Server error' });
+  }
+};
 
 const schema = Joi.object({
     title: Joi.string().required(),
     content: Joi.string().required(),
     author: Joi.string().required()
   });
+
   exports.createBlog = async (req, res) => {
     try {
         const { error } = schema.validate(req.body);
@@ -68,49 +69,6 @@ const schema = Joi.object({
         res.status(500).send({ error: "Error creating blog" });
     }
 };
-// exports.createBlogPost = async (req, res) => {
-//     try {
-//         const { title, content, author, image = '', public_id = '' } = req.body;
-  
-//       if (!title || !content || !author) {
-//         return res.status(400).json({ error: 'Title, content, and author are required' });
-//       }
-  
-//       const post = new Post({
-//         title,
-//         content,
-//         author,
-//         image: image || '',
-//         public_id: public_id || ''
-//       });
-  
-//       await post.save();
-  
-//       return res.status(201).send({
-//         message: 'Post created successfully',
-//         post
-//       });
-//     } catch (error) {
-//       console.error('Error in createBlogPost:', error); // Log detailed error
-//       return res.status(500).json({ message: 'Server error', error: error.message });
-//     }
-//   };
-  
-// exports.createBlog = async (req, res) => {
-//     try {
-//         const { error } = schema.validate(req.body);
-//         if (error) return res.status(400).send({ error: error.details[0].message });
-
-//         const { title, content, author } = req.body;
-//         const post = new Post({ title, content, author });
-//         await post.save();
-//         res.status(201).send(post);
-//     } catch (error) {
-        
-//         res.status(500).send({ error: "Error creating blog" });
-//     }
-// };
-
 
 exports.getAllBlogPosts = async (req, res) => {
   try {
@@ -251,3 +209,5 @@ exports.GetComment = async (req, res) => {
         res.status(500).json({ message: 'Server error' });
     }
 };
+
+// Ensure all exports are correct

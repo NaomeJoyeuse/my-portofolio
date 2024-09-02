@@ -1,28 +1,4 @@
-// const express = require("express")
-// const mongoose = require("mongoose")
-// const routes = require("./routes/routes")
-// const userRoutes = require("./routes/UserRoutes")
-// const passport = require('passport'); // Correct import of passport
-// require('./Utilities/passport_configuration');
-// const app = express();
 
-// mongoose
-//         .connect("mongodb://localhost:27017/blog_db1")
-//         .then(()=>{
-    
-//     const app = express()
-//     app.use(express.json());
-//     app.use(passport.initialize());
-//     app.use('/api',routes)
-//     app.use('/api', userRoutes)
-    
-    
-//     app.listen(5000, () => {
-//         console.log("Server has started!")
-//     })
-// })
-// module.exports = app;
-//  // Export the app for testing
 const express = require("express");
 const mongoose = require("mongoose");
 const routes = require("./routes/routes");
@@ -43,13 +19,41 @@ app.use('/api', userRoutes);
 app.get('/test', (req, res) => res.status(200).json({ message: 'Test route' }));
 
 
-mongoose
-        .connect("mongodb://localhost:27017/blog_db1")
-        .then(()=>{
+// mongoose
+//         .connect("mongodb://localhost:27017/blog_db1")
+//         .then(()=>{
            
-    swaggerDocs(app, 5000)
-    app.listen(5000, () => {
-        console.log("Server has started!")
-    })
-})
-module.exports = app;
+//     swaggerDocs(app, 5000)
+//     app.listen(5000, () => {
+//         console.log("Server has started!")
+//     })
+// })
+// module.exports = app;
+
+async function startServer() {
+    try {
+      await mongoose.connect("mongodb://localhost:27017/blog_db1", {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      });
+      console.log('Connected to MongoDB');
+  
+      swaggerDocs(app, 5000); // Initialize Swagger
+  
+      const server = app.listen(5000, () => {
+        console.log('Server has started on port 5000!');
+      });
+  
+      // Export the server instance so it can be closed in tests
+      return server;
+    } catch (error) {
+      console.error('Error starting the server:', error);
+    }
+  }
+  
+  // Only start the server if this script is run directly
+  if (require.main === module) {
+    startServer();
+  }
+  
+  module.exports = { app, startServer };

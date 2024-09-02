@@ -51,9 +51,9 @@ router.get('/blogs', isAuthenticated,blogController.getAllBlogPosts);
  *       '500':
  *         description: Internal server error
  */
-router.post('/blogs', isAuthenticated,blogController.createBlog);
+router.post('/blogs', isAuthenticated,blogController.createBlogPost);
 
-// router.post('/blog', isAuthenticated, blogController.createBlog);
+router.post('/blog', isAuthenticated, blogController.createBlog);
 
 /**
  * @swagger

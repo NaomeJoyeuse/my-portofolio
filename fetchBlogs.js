@@ -162,7 +162,7 @@ blogTableBody.addEventListener('click', event => {
         if (action === 'delete') {
             deleteBlog(blogId);
         } else if (action === 'edit') {
-            // Call editBlog function (make sure this function is defined elsewhere)
+            
             editBlog(blogId);
         }
     }
@@ -194,19 +194,19 @@ async function handleEditFormSubmit(event) {
         const response = await fetch(`https://blogs-backend-backup.onrender.com/api/blogs/${editBlogId}`, {
             method: 'PATCH',
             headers: new Headers({
-                'Authorization': token, // Add Bearer prefix for the token
-                'Content-Type': 'application/json' // Set content type to JSON
+                'Authorization': token, 
+                'Content-Type': 'application/json' 
             }),
-            body: JSON.stringify(updatedData) // Convert updated data to JSON
+            body: JSON.stringify(updatedData) 
         });
 
         const result = await response.json();
 
         if (response.ok) {
             showMessage('Blog updated successfully!', 'success');
-            fetchBlogs(); // Refresh the blog list
+            fetchBlogs(); 
             const editBlogModal = bootstrap.Modal.getInstance(document.getElementById('editBlogModal'));
-            editBlogModal.hide(); // Hide the modal
+            editBlogModal.hide();
         } else {
             showMessage(`Failed to update blog: ${result.message || 'Unknown error'}`, 'error');
         }
@@ -216,7 +216,7 @@ async function handleEditFormSubmit(event) {
     }
 }
 
-// Add event listener for the edit form
+
 document.getElementById('editBlogForm').addEventListener('submit', handleEditFormSubmit);
 
 
@@ -267,5 +267,63 @@ document.getElementById('editBlogForm').addEventListener('submit', handleEditFor
         createBlogForm.addEventListener('submit', handleFormSubmit);
     }
 
-    fetchBlogs(); // Initial fetch of blogs on page load
+    async function fetchCommentsCount() {
+      
+        try {
+            const response = await fetch('https://blogs-backend-backup.onrender.com/api/blogs/comments/count', {
+                method: 'GET',
+            });
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('total-comments').textContent = data.totalCommentsCount || 0;
+            } else {
+                showMessage(`Failed to load comments count: ${data.message || 'Unknown error'}`, 'error');
+            }
+        } catch (error) {
+            showMessage('An unexpected error occurred.', 'error');
+            console.error('Error:', error);
+        }
+    }
+    async function fetchLikesCount() {
+        try {
+            const response = await fetch('https://blogs-backend-backup.onrender.com/api/blogs/likes/count', {
+                method: 'GET',
+            });
+            const data = await response.json();
+            if (response.ok) {
+        
+                document.getElementById('total-likes').textContent = data.likescounts || 0;
+;
+            } else {
+                showMessage(`Failed to load likes: ${data.message || 'Unknown error'}`, 'error');
+            }
+        } catch (error) {
+            showMessage('An unexpected error occurred.', 'error');
+            console.error('Error:', error);
+        }
+    }
+    async function fetchBlogsCount() {
+        try {
+            const response = await fetch('https://blogs-backend-backup.onrender.com/api/blogs', {
+                method: 'GET',
+            });
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('total-blogs').textContent = data.length;
+            } else {
+                showMessage(`Failed to load blogs: ${data.message || 'Unknown error'}`, 'error');
+            }
+        } catch (error) {
+            showMessage('An unexpected error occurred.', 'error');
+            console.error('Error:', error);
+        }
+    }
+    async function fetchStatistics() {
+         await fetchLikesCount();
+        await fetchBlogsCount();
+        await fetchCommentsCount();
+    }
+
+    fetchStatistics();
+    fetchBlogs(); 
 });

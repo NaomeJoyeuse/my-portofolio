@@ -1,342 +1,387 @@
 body{
-overflow-x: hidden;
-}
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.navbar-collapse{
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.navbar-nav .nav-link {
-    font-size: 1.1rem;
-    margin-right: 60px;
-}
-.navbar-nav .nav-link:hover {
-    color: #007bff;
-}
-.navbar-toggler {
-    margin-left: auto; 
-}
-
-
-.image {
-   
-   width: 20%;
-    height: 40%;
-    position:absolute;
-    right: 100px;
-    top: 180px;
- 
-    transition: left 2s ease;
-}
-.image img{
-     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
-    position: absolute;
-    height: 140%;
-    left: 40%;
-    transform: translate(-50%);
-}
-.image:hover .girl{
-    left: 55%;
-}
-
-
-.home-details {
-    padding-top: 100px; 
-    text-align: left; 
-}
-
-.detail-title {
-    font-size: 30px;
-    margin-top: 50px; 
-   padding-left: 350px;
-   color: #D9D9D9;
-}
-.line {
-    width: 80px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    left: 350px;
-    top: 270px;
-}
-.detail-name {
-    font-size: 50px;
-    margin-top: 30px;
-    padding-left: 350px;
-    padding-top: 40px;
-}
-
-.detail-job {
-    font-size: 20px;
-    color: aqua; 
-    margin-top: 0px; 
-    padding-left: 350px;
-    padding-top: 10px;
-}
-
-.detail-email {
-    display: flex;
-  
-    align-items: center;
-    font-size: 30px;
-    margin-top: 50px; 
-    padding-left: 350px;
-}
-
-.detail-email img {
-    width: 30px;
-    margin-right: 10px; 
-
-}
-
-.contact {
-    font-size: 30px;
-    margin-top: 30px;
-    padding-left: 350px; 
-}
-
-.contact img {
-    width: 30px; 
-    margin-right: 10px;
-}
-/* about me */
-
-#About-me {
-    background-color: #f8f9fa;
-    padding: 20px;
-    width: 100%;
-    margin-top: 300px;
-}
-
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* portofolio-section */
-
-.top, .bottom {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.middle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.aside {
-    width: 48%;
-    margin-bottom: 20px;
-}
-.box2 {
-    margin-top: 100px;
-}
-.box4 {
-    margin-top: 20px;
-}
-.box3 {
-    font-family: 'Lateef', serif;
-    font-size: 30px;
-}
-.portofolio{
-    background-color: #f8f9fa;
-}
-/* bogs */
-#blog-section{
-    background-color: #f8f9fa;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.card {
-    height: 570px;
-}
-.card:hover {
-    transform: scale(1.05); 
-}
-.card-title {
-    font-weight: bold; 
-}
-.card-text {
-    font-size: 1.2em;
-    font-family: 'Lateef', serif;
-}
-.card-text1 {
-    font-size: 1.2em;
-    font-family: 'Lateef', serif;
-}
-.interaction {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.interaction i {
-    color: #007bff;
-}
-
-.interaction span {
-    font-size: 0.9em;
-    color: #6c757d;
-}
-/* contact */
-#contact-section {
-    background-color: #f8f9fa; 
-    padding: 3rem 0;
-}
-.contact-touch h5 {
-    text-transform: uppercase;
-    font-size: 1.75rem;
-    color: #007bff; 
-    font-weight: bold;
-}
-
-.contact-touch p {
-    margin-bottom: 0.5rem;
-    font-family:  'Lateef', serif;
-    font-size: 22px;
-}
-/* footer */
-
-.footer {
-    padding-top: 700px;
-    background-color:rgb(164, 164, 230);
-    color: white;
-    padding: 20px 0;
-}
-.footer a {
-    color: #f8f9fa;
-    text-decoration: none;
-}
-.footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 600px) {
-    .middle {
-        flex-direction: column;
-        align-items: center;
+    overflow-x: hidden;
     }
-
-    .aside {
-        width: 100%;
-        text-align: center;
-    }
-
-    .box4 {
-        text-align: center;
-    }
-}
-
-@media (max-width: 575.98px) {
     .navbar-brand {
-        margin-left: 0; 
+        font-weight: bold;
+        font-size: 1.5rem;
     }
-}
-
+    .navbar-collapse{
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+        margin-right: 60px;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #007bff;
+    }
+    .navbar-toggler {
+        margin-left: auto; 
+    }
     
-/* Responsive styles */
-@media (max-width: 700px) {
-    /* .home-details {
-        position: relative; 
-        margin-top: 250px; 
+    
+    .image {
+       
+       width: 20%;
+        height: 40%;
+        position:absolute;
+        right: 100px;
+        top: 180px;
+     
+        transition: left 2s ease;
     }
-    .detail-title,
-    .detail-name,
-    .detail-job,
-    .detail-email,
-   
-    .contact {
-        padding-left: 20px; 
-        text-align: center; 
+    .image img{
+         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+        position: absolute;
+        height: 140%;
+        left: 40%;
+        transform: translate(-50%);
+    }
+    .image:hover .girl{
+        left: 55%;
+    }
+    
+    
+    .home-details {
+        padding-top: 100px; 
+        text-align: left; 
+    }
+    
+    .detail-title {
+        font-size: 30px;
+        margin-top: 50px; 
+       padding-left: 350px;
+       color: #D9D9D9;
     }
     .line {
-        left: 50%; 
-        top: 30px; 
-        transform: translateX(-50%); 
+        width: 80px;
+        height: 3px;
+        background-color: black;
+        position: absolute;
+        left: 350px;
+        top: 270px;
     }
-    .detail-title {
-        font-size: 24px; 
-        margin-top: 30px;
-    }
-
     .detail-name {
-        font-size: 40px; 
-        margin-top: 20px;
-        padding-top: 20px; 
-    }
-
-    .detail-job {
-        font-size: 16px; 
-        padding-top: 5px; 
-    }
-
-    .detail-email {
-        font-size: 24px; 
+        font-size: 50px;
         margin-top: 30px;
-    } */
-
-    /* .contact {
-        font-size: 24px; 
-        margin-top: 20px; 
-    } */
-    
-    body{
-        overflow-x: hidden;
-        }
-    
-.image {
-        width: 50%; 
-        height: auto; 
-        position: static; 
-        margin: 20px auto; 
-        top: 0;
-        right: 0; 
-        transform: none;
+        padding-left: 350px;
+        padding-top: 40px;
     }
-
-    .image img {
-        height: auto; 
-        width: 100%; 
-        border-radius: 50%; 
-        position: relative; 
-        left: auto; 
-        transform: none; 
+    
+    .detail-job {
+        font-size: 20px;
+        color: aqua; 
+        margin-top: 0px; 
+        padding-left: 350px;
+        padding-top: 10px;
     }
-
-    .home-details {
-        padding-top: 20px; 
-        text-align: center; 
-
-    .detail-title,
-    .line,
-    .detail-name,
-    .detail-job,
-    .detail-email,
+    
+    .detail-email {
+        display: flex;
+      
+        align-items: center;
+        font-size: 30px;
+        margin-top: 50px; 
+        padding-left: 350px;
+    }
+    
+    .detail-email img {
+        width: 30px;
+        margin-right: 10px; 
+    
+    }
+    
     .contact {
-        padding-left: 0; 
-        text-align: center; 
+        font-size: 30px;
+        margin-top: 30px;
+        padding-left: 350px; 
     }
-        /* .image {
-            top: 50%; 
-            right: 50%; 
-            transform: translate(50%, -50%);
-            width: 200px; 
-            height: 200px; 
-        } */ */
-        .blog-section{
-            padding-bottom: 290px;
+    
+    .contact img {
+        width: 30px; 
+        margin-right: 10px;
+    }
+    /* about me */
+    
+    #About-me {
+        background-color: #f8f9fa;
+        padding: 20px;
+        width: 100%;
+        margin-top: 300px;
+    }
+    
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* portofolio-section */
+    
+    .top, .bottom {
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .aside {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .box2 {
+        margin-top: 100px;
+    }
+    .box4 {
+        margin-top: 20px;
+    }
+    .box3 {
+        font-family: 'Lateef', serif;
+        font-size: 30px;
+    }
+    .portofolio{
+        background-color: #f8f9fa;
+    }
+    /* bogs */
+    #blog-section{
+        background-color: #f8f9fa;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .card {
+        height: 570px;
+    }
+    .card:hover {
+        transform: scale(1.05); 
+    }
+    .card-title {
+        font-weight: bold; 
+    }
+    .card-text {
+        font-size: 1.2em;
+        font-family: 'Lateef', serif;
+    }
+    .card-text1 {
+        font-size: 1.2em;
+        font-family: 'Lateef', serif;
+    }
+    .interaction {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    
+    .interaction i {
+        color: #007bff;
+    }
+    
+    .interaction span {
+        font-size: 0.9em;
+        color: #6c757d;
+    }
+    /* // */
+    .blog-card img {
+        width: 100%; /* Ensure the image covers the width of the column */
+        height: 150px; /* Set a fixed height for images */
+        object-fit: cover; /* Maintain aspect ratio and cover the box */
+    }
+    .card-text {
+        overflow: hidden; /* Hide overflow content */
+        text-overflow: ellipsis; /* Add ellipsis (...) */
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Number of lines to display */
+        -webkit-box-orient: vertical;
+    }
+    /* contact */
+    #contact-section {
+        background-color: #f8f9fa; 
+        padding: 3rem 0;
+    }
+    .contact-touch h5 {
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        color: #007bff; 
+        font-weight: bold;
+    }
+    
+    .contact-touch p {
+        margin-bottom: 0.5rem;
+        font-family:  'Lateef', serif;
+        font-size: 22px;
+    }
+    /* footer */
+    
+    .footer {
+        padding-top: 700px;
+        background-color:rgb(164, 164, 230);
+        color: white;
+        padding: 20px 0;
+    }
+    .footer a {
+        color: #f8f9fa;
+        text-decoration: none;
+    }
+    .footer a:hover {
+        text-decoration: underline;
+    }
+    
+    
+    .toast-info {
+        background-color: #007bff;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+    
+    .toast-success {
+        background-color: #28a745;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+    
+    .toast-error {
+        background-color: #dc3545;
+        color: #ffffff;
+        border-radius: 5px;
+    }
+    
+    .toast-warning {
+        background-color: #ffc107;
+        color: #000000;
+        border-radius: 5px;
+    }
+    
+    @media (max-width: 600px) {
+        .middle {
+            flex-direction: column;
+            align-items: center;
         }
-
+    
+        .aside {
+            width: 100%;
+            text-align: center;
+        }
+    
+        .box4 {
+            text-align: center;
+        }
     }
-
-}
+    
+    @media (max-width: 575.98px) {
+        .navbar-brand {
+            margin-left: 0; 
+        }
+    }
+    
+        
+    /* Responsive styles */
+    @media (max-width: 700px) {
+        /* .home-details {
+            position: relative; 
+            margin-top: 250px; 
+        }
+        .detail-title,
+        .detail-name,
+        .detail-job,
+        .detail-email,
+       
+        .contact {
+            padding-left: 20px; 
+            text-align: center; 
+        }
+        .line {
+            left: 50%; 
+            top: 30px; 
+            transform: translateX(-50%); 
+        }
+        .detail-title {
+            font-size: 24px; 
+            margin-top: 30px;
+        }
+    
+        .detail-name {
+            font-size: 40px; 
+            margin-top: 20px;
+            padding-top: 20px; 
+        }
+    
+        .detail-job {
+            font-size: 16px; 
+            padding-top: 5px; 
+        }
+    
+        .detail-email {
+            font-size: 24px; 
+            margin-top: 30px;
+        } */
+    
+        /* .contact {
+            font-size: 24px; 
+            margin-top: 20px; 
+        } */
+        
+        body{
+            overflow-x: hidden;
+            }
+        
+    .image {
+            width: 50%; 
+            height: auto; 
+            position: static; 
+            margin: 20px auto; 
+            top: 0;
+            right: 0; 
+            transform: none;
+        }
+    
+        .image img {
+            height: auto; 
+            width: 100%; 
+            border-radius: 50%; 
+            position: relative; 
+            left: auto; 
+            transform: none; 
+        }
+    
+        .home-details {
+            padding-top: 20px; 
+            text-align: center; 
+    
+        .detail-title,
+        .line,
+        .detail-name,
+        .detail-job,
+        .detail-email,
+        .contact {
+            padding-left: 0; 
+            text-align: center; 
+        }
+            /* .image {
+                top: 50%; 
+                right: 50%; 
+                transform: translate(50%, -50%);
+                width: 200px; 
+                height: 200px; 
+            } */ */
+            .blog-section{
+                padding-bottom: 290px;
+            }
+    
+        }
+    
+    }
+    
+    @font-face {
+        font-family: 'Bootstrap Icons';
+        src: url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d') format('woff2');
+        font-display: swap;
+    }
+    

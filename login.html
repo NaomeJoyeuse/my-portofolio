@@ -6,7 +6,6 @@
     <title>Login</title>
     <link rel="stylesheet" href="authsytlyes.css">
     <style>
-        /* Basic styling for the message container */
         .message {
             margin-top: 10px;
             padding: 10px;
@@ -14,10 +13,10 @@
             color: #fff;
         }
         .message.success {
-            background-color: #4caf50; /* Green for success */
+            background-color: #4caf50; 
         }
         .message.error {
-            background-color: #f44336; /* Red for errors */
+            background-color: #f44336; 
         }
     </style>
 </head>
@@ -61,14 +60,17 @@
                     });
 
                     const result = await response.json();
-
+                    console.log('User Role:', result);
                     if (response.ok) {
                         messageContainer.textContent = result.message; 
                         messageContainer.className = 'message success'; 
 
-                        localStorage.setItem('authToken', result.token);                       
-                        setTimeout(() => {
-                            window.location.href = 'index.html'; 
+                        localStorage.setItem('authToken', result.token);  
+                        localStorage.setItem('role', result.role);
+                        // Log the rol
+                       setTimeout(() => {
+                       
+                            window.location.href = result.role === 'admin' ? 'admin.html' : 'index.html'; 
                         }, 10); 
                     } else {
                         messageContainer.textContent = `Error: ${result.message}`; 

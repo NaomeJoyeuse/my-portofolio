@@ -17,10 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Helper function to hide the message
     function hideMessage() {
         if (messageContainer) {
-            messageContainer.style.display = 'none'; // Hide the message container
+            messageContainer.style.display = 'none'; 
         }
     }
         
@@ -47,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 blogTableBody.innerHTML = '';
                 displayRecentBlogs(blogs); 
+               
                 blogs.forEach((blog, index) => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
@@ -91,6 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
             recentBlogsContainer.appendChild(blogItem);
         });
     }
+   
+
 // Delete blog function
 async function deleteBlog(blogId) {
     const token = localStorage.getItem('authToken');

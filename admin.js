@@ -6,32 +6,41 @@ document.addEventListener('DOMContentLoaded', function() {
     const overviewLink = document.getElementById('overview-link');
     const viewBlogsLink = document.getElementById('view-blogs-link');
     const manageProjectsLink = document.getElementById('manage-projects-link');
+    const blogDisplay = document.getElementById('blog-display'); 
+    const cardContainer = document.getElementById('card-container');
 
-    // Initially hide the table and show the form
+
     formContainer.style.display = 'none';
     tableContainer.style.display = 'none';
 
-    // Show the form and hide the table when clicking "Create Blog"
     createBlogLink.addEventListener('click', function(event) {
         event.preventDefault();
         formContainer.style.display = 'block';
         tableContainer.style.display = 'none';
+        blogDisplay.style.display = 'none'; 
+        cardContainer.style.display = 'none'; 
     });
 
-    // Show the table and hide the form when clicking "Overview", "View All Blogs", or "Manage Projects"
-    overviewLink.addEventListener('click', function() {
-        formContainer.style.display = 'none';
-        tableContainer.style.display = 'none'; // Hide the table in the overview section
-    });
+
+    // overviewLink.addEventListener('click', function() {
+    //     formContainer.style.display = 'none';
+    //     tableContainer.style.display = 'none'; 
+    //     blogDisplay.style.visibility = 'visible';
+    //     cardContainer.style.display = 'block'; 
+    // });
 
     viewBlogsLink.addEventListener('click', function() {
         formContainer.style.display = 'none';
-        tableContainer.style.display = 'block'; // Show the table when viewing blogs
-        loadBlogs(); // Load blogs when the table is shown
+        tableContainer.style.display = 'block'; 
+        blogDisplay.style.display = 'none';
+        cardContainer.style.display = 'none'; 
+        loadBlogs(); 
     });
 
     manageProjectsLink.addEventListener('click', function() {
         formContainer.style.display = 'none';
-        tableContainer.style.display = 'none'; // Hide the table in the manage projects section
+        tableContainer.style.display = 'none'; 
+        blogDisplay.style.display = 'none'; 
+        cardContainer.style.display = 'none'; 
     });
 });

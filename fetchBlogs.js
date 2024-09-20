@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (response.ok) {
                 blogTableBody.innerHTML = '';
-
+                displayRecentBlogs(blogs); 
                 blogs.forEach((blog, index) => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
@@ -74,6 +74,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         
+    }
+    function displayRecentBlogs(blogs) {
+        const recentBlogsContainer = document.getElementById('recent-blogs');
+        recentBlogsContainer.innerHTML = ''; 
+
+        const recentBlogs = blogs.slice(-5); 
+        recentBlogs.forEach(blog => {
+            const blogItem = document.createElement('li');
+            blogItem.className = 'recent-blog-item';
+            blogItem.innerHTML = `
+                <h5>${blog.title}</h5>
+                <p><strong>Author:</strong> ${blog.author}</p>
+                <p><strong>Date:</strong> ${new Date(blog.date).toLocaleString()}</p>
+            `;
+            recentBlogsContainer.appendChild(blogItem);
+        });
     }
 // Delete blog function
 async function deleteBlog(blogId) {

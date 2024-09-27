@@ -175,8 +175,7 @@
                     commentList.innerHTML = '';
 
                     comments.forEach(comment => {
-                        const email = comment.user.email; // Get the email
-                        const username = email.split('@')[0];
+                        
                         addCommentToList(comment, blogId);
                     });
 
@@ -190,6 +189,8 @@
         }
         function addCommentToList(comment, blogId) {
             const commentList = document.getElementById(`comment-list-${blogId}`);
+            const email = comment.user.email; // Get the email
+            const username = email.split('@')[0];
             const commentHTML = `
                 <li class="mb-2">
                     <div class="comment">

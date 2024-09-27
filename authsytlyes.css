@@ -10,9 +10,9 @@ body {
 
 .page-container {
     display: flex;
-    flex-direction: row; /* Change to row to place image and form side by side */
+    flex-direction: row; 
     width: 100%;
-    max-width: 1200px; /* Increase max-width to accommodate both elements */
+    max-width: 1200px; 
     margin: 20px;
     border-radius: 8px;
     overflow: hidden;
@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-    flex: 1; /* Allow image section to take available space */
+    flex: 1; 
     overflow: hidden;
 }
 
@@ -31,8 +31,8 @@ body {
 }
 
 .form-container {
-    flex: 1; /* Allow form section to take available space */
-    background: #ffffff; /* White background for the form */
+    flex: 1; 
+    background: #ffffff; 
     padding: 40px;
    
    
@@ -44,28 +44,28 @@ body {
 
 h1 {
     margin-top: 0;
-    font-size: 28px; /* Larger heading */
+    font-size: 28px; 
     color: #333;
 }
 
 form {
     width: 100%;
-    max-width: 450px; /* Wider form */
+    max-width: 450px;
 }
 
 label {
     display: block;
-    margin-bottom: 10px; /* Increased margin */
+    margin-bottom: 10px; 
     font-weight: bold;
     color: #555;
 }
 
 input {
     width: 100%;
-    padding: 14px; /* Larger padding */
-    margin-bottom: 20px; /* Increased margin */
+    padding: 14px;
+    margin-bottom: 20px; 
     border: 1px solid #ddd;
-    border-radius: 6px; /* Slightly larger radius */
+    border-radius: 6px; 
     font-size: 16px;
 }
 

@@ -6,7 +6,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="authsytlyes.css">
     <style>
-        /* Basic styling for the message container */
+        
         .message {
             margin-top: 10px;
             padding: 10px;
@@ -14,10 +14,10 @@
             color: #fff;
         }
         .message.success {
-            background-color: #4caf50; /* Green for success */
+            background-color: #4caf50; 
         }
         .message.error {
-            background-color: #f44336; /* Red for errors */
+            background-color: #f44336; /
         }
     </style>
 </head>
@@ -29,13 +29,15 @@
         <div class="form-container">
             <h1>Signup</h1>
             <form id="signup-form">
+            
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
                 
                 <button type="submit">Signup</button>
-                <div id="message" class="message"></div> <!-- Message container -->
+                <div id="message" class="message"></div> 
             </form>
             <p>Already have an account? <a href="login.html">Login here</a>.</p>
         </div>
@@ -48,7 +50,6 @@
 
             form.addEventListener('submit', async (event) => {
                 event.preventDefault(); 
-
                 const email = document.getElementById('email').value;
                 const password = document.getElementById('password').value;
 

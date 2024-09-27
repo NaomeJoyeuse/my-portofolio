@@ -142,22 +142,19 @@ async function editBlog(blogId) {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': token // Ensure the token is prefixed with 'Bearer'
+                'Authorization': token 
             })
         });
 
         const blog = await response.json();
 
         if (response.ok) {
-            // Populate the modal fields with blog data
+           
             document.getElementById('editBlogId').value = blog._id;
             document.getElementById('editBlogTitle').value = blog.title;
             document.getElementById('editAuthor').value = blog.author;
             document.getElementById('editDescription').value = blog.content;
-            // For image, you can provide a preview or a default image if needed
-            // document.getElementById('editImage').value = '';
-
-            // Show the modal
+           l
             const editBlogModal = new bootstrap.Modal(document.getElementById('editBlogModal'));
             editBlogModal.show();
         } else {

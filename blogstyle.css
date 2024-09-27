@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Blog title */
+
 .blog-detail h1 {
     font-size: 2.5em;
     color: #2c3e50;
@@ -95,6 +95,66 @@ body {
     text-decoration: none;
 }
 
+
+.like-button i {
+    margin-right: 5px;
+}
+
+.comments-section {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.comments-section h3 {
+    margin-bottom: 10px;
+}
+
+.comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-list li {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.comment-form textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.comment-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.add-comment-button {
+    background-color: blue; /* Hot pink */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for spacing */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
 .back-button:hover {
     background-color: #0056b3;
 }
